@@ -27,3 +27,35 @@ Things you may want to cover:
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
+testing specs for recipes:
+name: string
+summary: text
+description: text
+
+name
+- name must be present
+- name must be between 5 and 100 characters
+
+summary
+- summary must be present
+- summary must be bewteen 10 and 150 characters
+
+description
+- descriptin must be present
+- description must be between 20 and 500 charcters
+
+- chef_id must be present (To be added later on)
+
+testing specs for chefs:
+chefname: string
+email: string
+
+
+name
+- chefname must be present
+- chefname must be between 5 and 100 characters
+
+email
+- must be valid
+- must be unique (Since we will use this for logins later)
+- must be present
