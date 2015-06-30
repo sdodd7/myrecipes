@@ -59,3 +59,21 @@ email
 - must be valid
 - must be unique (Since we will use this for logins later)
 - must be present
+
+
+For Chefs Authentication System
+
+What we have already:
+- Chef model and validations
+- Chefs table with columns chefname and email
+
+What we need to do:
+Authentication we will use (Has secure password)
+- Add passwords to the chefstable so the chefs can be authenticated and logged in
+- Use email as login credentials, since email is unique
+- Ability to register new chefs to use the app
+- Ability to display a chefs profile
+- Ability to list all chefs using the app
+- Ability for all chefs to login and logout of the app
+- Restrict actions, ie edit recipe and like feature to logged in chefs only
+- Restricting edit of recipes by chefs who created the recipes

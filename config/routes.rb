@@ -20,6 +20,10 @@ Rails.application.routes.draw do
     
   end
   
+  resources :chefs, except: [:new]
+  
+  get '/register', to: 'chefs#new'
+  
   
   
 end
