@@ -88,3 +88,23 @@ Authentication Updates
 6) Before_action :require_user, except [:show, :index]
 7) Before_action :require_same_user for chefs, only: [:edit, :update]
 
+Adding Reviews
+
+Things we will need
+
+1. Migration to create reviews table, body, type = text_field, two foreign keys, reference chef_id, reference recipe_id
+2. You'll then need to build the Review model
+3. You'll need to create tests for the spec for the model, add validations to the review model (Did this for the chefs and recipes model)
+4. Build associations, has_many, belongs_to (This will be between the recipes and the reviews and the chefs and the reviews)
+5. Test out associations in rails console
+  Grab a local variable recipe = Recipe.first then recipe.reviews should give you all the reviews associated with that recipe
+  Grab a local variable chef = Chef.first then chef.reviews should give you all the reviews associated with that chef
+6. I associate each recipe with reviews os in the recipe show page we would want a text area where logged in users can add there reviews.
+7. Next expose some routes for it so resources :reviews (new, create, show) in the config routes.rb file
+8. When the recipes are created we want to ensure that only authenticated chefs can create reviews, before_action require_user
+9. Will need to associate chef_id and recipe_id when we create and save the review
+10. This will be a model back form so use existing code if possible. Can grab description twext area code to build review text area code. Look for help from the recipes index page to see how we can display the views associated with every recipe
+ie Add pagination to the reviews box so that they don't take up huge downloads on the page
+
+Make sure we create this using a git branch feature so that if it doesn't work we can revert back
+Other important thing is this is just a suggestion to test us
